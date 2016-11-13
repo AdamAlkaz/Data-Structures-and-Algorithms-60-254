@@ -40,5 +40,8 @@ int dequeue (struct queue *circQueue){
 
 void freeSpace (struct queue *circQueue){
 	free(circQueue -> array); //freeing allocated array memory
+	circQueue -> array = NULL;
 	free(circQueue); //freeing allocated struct memory
+	circQueue = NULL;
+
 }
